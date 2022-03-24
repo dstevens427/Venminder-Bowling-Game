@@ -1,0 +1,16 @@
+<section class="d-flex flex-column w-100 p-3">
+  <div>
+    Enter number of pins knocked down
+  </div>
+  <app-score-input class="my-2" [gameOver]="scoreService.gameOver"></app-score-input>
+  <div>
+    <ul class="d-flex flex-wrap justify-content-start align-items-center list-unstyled w-100">
+      <li *ngFor="let frame of scoreService.frames" class="col p-1">
+        <app-frame [frame]="frame"></app-frame>
+      </li>
+    </ul>
+  </div>
+  <div>
+    Score: {{scoreService.currentScore}}
+  </div>
+</section>

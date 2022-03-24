@@ -1,0 +1,17 @@
+.Frame {
+    min-width: 10%;
+    min-height: 50px;
+    max-width: 80px;
+
+    &__frame-number {
+        top: 0;
+        left: 0;
+        line-height: 16px;
+        font-size: 14px;
+    }
+
+    &__rolls {
+        top: 0;
+        right: 0;
+    }
+}

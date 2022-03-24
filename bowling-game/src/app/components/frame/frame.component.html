@@ -1,0 +1,13 @@
+<div class="Frame d-flex border border-dark rounded justify-content-center align-items-end position-relative">
+    <div class="Frame__frame-number position-absolute" [ngClass]="{'ps-1': !frame.IsTenthFrame}">
+        {{frame.FrameNumber}}
+    </div>
+    <div class="Frame__rolls position-absolute d-flex justify-content-end w-50 h-50" [ngClass]="{'w-75': frame.IsTenthFrame}">
+        <div *ngFor="let roll of frame.RollBoxes; let i = index" class="d-inline-flex align-items-center justify-content-center border w-50 h-75">
+            {{frame.RollsForDisplay[i]}}
+        </div>
+    </div>
+    <div>
+        {{frame.IsActive ? frame.DisplayScore : ''}}
+    </div>
+</div>

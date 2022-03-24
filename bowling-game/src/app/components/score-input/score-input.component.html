@@ -1,0 +1,5 @@
+<div class="d-inline-flex align-items-center">
+    <button *ngFor="let number of numberArray" (click)="submitRoll(number)" [disabled]="gameOver" class="mx-2 rounded border border-dark">
+        {{number}}
+    </button>
+</div>
